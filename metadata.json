@@ -1,0 +1,8 @@
+{
+  "name": "東海岸尋寶 - 石頭辨識遊戲",
+  "description": "漫步東海岸3D礫灘，發掘並辨識台灣特色石種，加入 Firebase 紀錄、排行榜與後台管理功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
