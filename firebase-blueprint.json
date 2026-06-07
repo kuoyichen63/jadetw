@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "GameRecord": {
+      "title": "Game Record",
+      "description": "User play records of the rock identification game",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string" },
+        "startTime": { "type": "string" },
+        "totalDiscovered": { "type": "integer" },
+        "correctCount": { "type": "integer" },
+        "incorrectCount": { "type": "integer" },
+        "accuracy": { "type": "number" },
+        "durationSeconds": { "type": "integer" }
+      },
+      "required": ["username", "startTime", "totalDiscovered", "correctCount", "incorrectCount", "accuracy", "durationSeconds"]
+    },
+    "AdminSettings": {
+      "title": "Admin Settings",
+      "description": "System settings such as admin password",
+      "type": "object",
+      "properties": {
+        "password": { "type": "string" }
+      },
+      "required": ["password"]
+    }
+  },
+  "firestore": {
+    "/records/{recordId}": {
+      "schema": "GameRecord",
+      "description": "Collection of all game play records"
+    },
+    "/system/admin_config": {
+      "schema": "AdminSettings",
+      "description": "Admin level global configuration"
+    }
+  }
+}
